@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "WorkSans-regular";
+    src: url("../assets/fonts/WorkSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "WorkSans-light";
+    src: url("../assets/fonts/WorkSans-Light.ttf") format("truetype");
+}
