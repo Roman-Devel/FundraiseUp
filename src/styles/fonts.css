@@ -4,6 +4,11 @@
 }
 
 @font-face {
+	font-family: "WorkSans-regular";
+	src: url("../assets/fonts/WorkSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
 	font-family: "CodePro-light";
 	src: url("../assets/fonts/SourceCodePro-Light.ttf") format("truetype");
 }

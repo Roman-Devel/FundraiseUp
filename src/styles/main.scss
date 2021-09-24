@@ -1,15 +1,24 @@
 @import "~normalize.css";
 @import "./fonts.css";
 
+@import "header";
+
+* {
+	box-sizing: border-box;
+}
+input {
+	outline: none;
+}
+
 body {
 	background-color: #F7F7F7;
-    font-family: "WorkSans-light", sans-serif;
+    font-family: "WorkSans-regular", sans-serif;
 }
 
 .wrapper {
+	position: relative;
 	margin: 0 auto;
 	padding: 53px 0;
 	width: 1224px;
-	box-sizing: border-box;
 	color: #2F2F30;
 }
