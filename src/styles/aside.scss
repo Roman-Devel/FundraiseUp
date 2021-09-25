@@ -43,6 +43,10 @@
 					@include addImage(18px, 18px, cancel);
 				}
 			}
+
+			&:hover:not(&-active) {
+				background-color: rgba(243,243,243, 0.35);
+			}
 		}
 	}
 }

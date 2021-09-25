@@ -52,6 +52,7 @@
 					margin-left: 8px;
 					@include addImage(18px, 18px, icon-copy);
 					cursor: pointer;
+					transition: all 0.2s;
 				}
 			}
 		}

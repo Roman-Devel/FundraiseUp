@@ -4,6 +4,11 @@
 }
 
 @font-face {
+	font-family: "WorkSans-SemiBold";
+	src: url("../assets/fonts/WorkSans-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
 	font-family: "CodePro-regular";
 	src: url("../assets/fonts/SourceCodePro-Regular.ttf") format("truetype");
 }

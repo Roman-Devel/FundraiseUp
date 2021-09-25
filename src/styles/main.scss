@@ -4,9 +4,20 @@
 @import "header";
 @import "subheader";
 @import "aside";
+@import "formContent";
 
 * {
 	box-sizing: border-box;
+}
+
+button {
+	outline: none;
+	border: none;
+	text-decoration: none;
+	cursor: pointer;
+}
+select {
+	cursor: pointer;
 }
 input {
 	outline: none;
@@ -26,6 +37,9 @@ body {
 
 	&__center {
 		@include flex(space-between, flex-start);
-		margin-top: 24px;
+		margin-top: $margin-top;
 	}
 }
+
+button:active 		{ transform: scale(0.98) }
+.icon-copy:active 	{ transform: scale(0.95) }

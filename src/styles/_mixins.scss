@@ -29,6 +29,6 @@
 @mixin addImage($w, $h, $name) {
 	width: $w;
 	height: $h;
-	background: url("../assets/images/" + $name + ".png") no-repeat;
+	background: url("../assets/images/" + $name + ".svg") no-repeat;
 	background-size: 100% auto;
 }

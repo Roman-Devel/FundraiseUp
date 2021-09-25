@@ -24,6 +24,7 @@
 
 		<div class="wrapper__center">
 			<main class="main">
+
 				<div class="subheader">
 					<div class="subheader__header">
 	
@@ -75,6 +76,141 @@
 	
 					</div>
 				</div>
+
+				<div class="formContent">
+
+					<div class="navMenu">
+
+						<div class="navMenu__item navMenu__item-active">
+							Behavior
+						</div>
+
+						<div class="navMenu__item">
+							Appearance
+						</div>
+
+						<div class="navMenu__item">
+							Custom Fields
+						</div>
+
+						<div class="navMenu__item">
+							Questions
+						</div>
+
+						<div class="navMenu__item">
+							URL Control
+						</div>
+
+					</div>
+
+					<form class="form">
+
+						<div class="part">
+							
+							<div class="part__left">
+								<label for="Designation">Designation</label>
+							</div>
+
+							<div class="part__right">
+								<div class="selectWrap">
+									<select name="Designation" id="Designation">
+										<option value="Match Checkout Setting" selected>Match Checkout Setting</option>
+										<option value="Something else">Something else...</option>
+									</select>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="part">
+							
+							<div class="part__left">
+								<label for="currencyValue">Goal</label>
+							</div>
+
+							<div class="part__right">
+								<span class="currencyName">$</span>
+								<input type="number" id="currencyValue" name="currencyValue" class="currencyValue">
+
+								<div class="selectWrap selectWrap-currency">
+									<select name="currencySelect" id="currencySelect">
+										<option value="usd" selected>USD</option>
+										<option value="rub">RUB</option>
+									</select>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="part part-amount">
+							
+							<div class="part__left part__left-amount">
+								<label for="amount">Default Amount</label>
+							</div>
+
+							<div class="part__right part__right-amount">
+								<div class="group">
+									<input type="radio" name="amount">
+									Match Checkout Setting
+								</div>
+								<div class="group">
+									<input type="radio" name="amount" checked>
+									Customize
+								</div>
+								<div class="checkBox">
+									<input type="checkbox" name="amountCheck" checked>	Allow donor to change default currency
+								</div>
+							</div>
+
+						</div>
+
+						<div class="part">
+							
+							<div class="part__left">
+								<label for="rangeSize">Border size</label>
+							</div>
+
+							<div class="part__right">
+								<div class="range">
+									<div class="range__wrapper">
+										<div class="trackSize"></div>
+										<input type="range" name="rangeSize" id="rangeSize" value="50" min="0" max="100" step="1">
+									</div>
+									<span class="count">2px</span>
+								</div>
+							</div>
+
+						</div>
+						
+						<div class="part">
+							
+							<div class="part__left">
+								<label for="rangeRadius">Border radius</label>
+							</div>
+
+							<div class="part__right">
+								<div class="range">
+									<div class="range__wrapper">
+										<div class="trackRadius"></div>
+										<input type="range" name="rangeRadius" id="rangeRadius">
+									</div>
+									<span class="count">15px</span>
+								</div>
+							</div>
+
+						</div>
+						
+						<div class="form__bottom">
+							
+							<button type="submit">Save changes</button>
+							<button type="reset">Cancel</button>
+
+						</div>
+
+					</form>
+
+				</div>
+
 			</main>
 
 			<aside class="aside">
