@@ -1,1 +1,48 @@
 @import "variables";
+@import "mixins";
+
+.aside {
+	position: sticky;
+	top: 0;
+	width: 264px;
+	min-height: 205px;
+	@include mainCardRulles;
+
+	.nav {
+		&__item {
+			&:last-child {
+				border-bottom: none;
+			}
+
+			&-active {
+				background-color: #F3F3F3;
+			}
+
+			@include flex(left, center);
+			height: 51px;
+			border-bottom: 1px solid #DBDCDE;
+			text-decoration: none;
+			color: #2F2F30;
+
+			.icon {
+				margin: 12px 8px 12px 16px;
+
+				&-repeat {
+					@include addImage(18px, 18px, repeat);
+				}
+
+				&-wallet {
+					@include addImage(18px, 18px, wallet);
+				}
+
+				&-calendar {
+					@include addImage(18px, 18px, calendar);
+				}
+
+				&-cancel {
+					@include addImage(18px, 18px, cancel);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,34 @@
+@mixin mainCardRulles {
+	border: 1px solid #DBDCDE;
+	box-shadow: 1px 3px 3px rgba(62, 63, 64, 0.1);
+	border-radius: 8px;
+	background: #FFFFFF;
+}
+
+@mixin headerCardRulles($padding, $height) {
+	padding-left: $padding;
+	padding-right: $padding;
+	min-height: $height;
+	border-bottom: 1px solid #DBDCDE;
+}
+
+@mixin footerCardRulles($padding, $height, $bc) {
+	padding-left: $padding;
+	padding-right: $padding;
+	min-height: $height;
+	border-radius: 8px;
+	background-color: $bc;
+}
+
+@mixin flex($direction-first, $direction-second) {
+	display: flex;
+	justify-content: $direction-first;
+	align-items: $direction-second;
+}
+
+@mixin addImage($w, $h, $name) {
+	width: $w;
+	height: $h;
+	background: url("../assets/images/" + $name + ".png") no-repeat;
+	background-size: 100% auto;
+}

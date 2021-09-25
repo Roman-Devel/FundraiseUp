@@ -1,1 +1,96 @@
 @import "variables";
+@import "mixins";
+
+.subheader {
+	width: 936px;
+	min-height: 182px;
+	@include mainCardRulles;
+
+	&__header {
+		@include flex(space-between, center);
+		@include headerCardRulles($header-padding, 104px);
+
+		.donation {
+			&__name {
+				margin-bottom: 4px;
+				@include flex(left, center);
+				font-size: 14px;
+
+				.icon-dollar {
+					margin-right: 8px;
+					@include addImage(18px, 18px, dollar-sign);
+				}
+			}
+
+			&__value {
+				&-current {
+					font-size: 24px;
+					line-height: 32px;
+					color: $active-text;
+				}
+				&-prev {
+					font-size: 16px;
+					color: $inactive-text;
+				}
+			}
+		}
+
+		.id {
+			&__name {
+				font-family: "CodePro-regular", sans-serif;
+				font-size: 16px;
+				line-height: 20px;
+				color: #919293;
+			}
+
+			&__value {
+				@include flex(left, center);
+				font-size: 16px;
+				line-height: 24px;
+
+				.icon-copy {
+					margin-left: 8px;
+					@include addImage(18px, 18px, icon-copy);
+					cursor: pointer;
+				}
+			}
+		}
+	}
+
+	&__footer {
+		@include flex(left, center);
+		@include footerCardRulles(0, 78px, $background-bottom);
+
+		.item {
+			&:last-child {
+				border-right: none;
+			}
+
+			padding: 0 $header-padding;
+			border-right: 1px solid #D7D8DA;
+
+			&__title {
+				margin-bottom: 2px;
+				font-size: 14px;
+				line-height: 20px;
+				color: $inactive-text;
+			}
+
+			&__subtitle {
+				&-purple {
+					color: #6665DD;
+				}
+
+				@include flex(left, center);
+				font-size: 16px;
+				line-height: 24px;
+				color: $active-text;
+
+				.icon-status {
+					margin-right: 8px;
+					@include addImage(18px, 18px, check);
+				}
+			}
+		}
+	}
+}

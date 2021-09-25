@@ -2,6 +2,8 @@
 @import "./fonts.css";
 
 @import "header";
+@import "subheader";
+@import "aside";
 
 * {
 	box-sizing: border-box;
@@ -21,4 +23,9 @@ body {
 	padding: 53px 0;
 	width: 1224px;
 	color: #2F2F30;
+
+	&__center {
+		@include flex(space-between, flex-start);
+		margin-top: 24px;
+	}
 }
