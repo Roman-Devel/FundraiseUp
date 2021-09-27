@@ -17,6 +17,7 @@ button {
 	cursor: pointer;
 }
 select {
+	-webkit-appearance: none;
 	cursor: pointer;
 }
 input {
@@ -43,3 +44,5 @@ body {
 
 button:active 		{ transform: scale(0.98) }
 .icon-copy:active 	{ transform: scale(0.95) }
+
+@import "media";

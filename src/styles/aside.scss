@@ -6,9 +6,17 @@
 	top: 0;
 	width: 264px;
 	min-height: 205px;
-	@include mainCardRulles;
+	
+	.sandwich {
+		display: none;
+		width: 30px;
+		height: 30px;
+	}
 
 	.nav {
+
+		@include mainCardRulles;
+
 		&__item {
 			&:last-child {
 				border-bottom: none;
@@ -19,6 +27,7 @@
 			}
 
 			@include flex(left, center);
+			padding-right: 10px;
 			height: 51px;
 			border-bottom: 1px solid #DBDCDE;
 			text-decoration: none;
@@ -44,8 +53,10 @@
 				}
 			}
 
-			&:hover:not(&-active) {
-				background-color: rgba(243,243,243, 0.35);
+			&:focus {
+				outline: none;
+				text-decoration: underline;
+				color: $active-text;
 			}
 		}
 	}

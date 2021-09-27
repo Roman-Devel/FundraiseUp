@@ -76,7 +76,10 @@ module.exports = {
 									[
 										'autoprefixer',
 										{
-											overrideBrowserslist:['last 5 version']
+											overrideBrowserslist:[
+												"last 4 version",
+												"IE 11"
+											]
 										}
 									]
 								],

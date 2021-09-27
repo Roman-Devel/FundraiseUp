@@ -16,7 +16,7 @@
 			<div class="header__footer">
 				<input type="search" name="search" placeholder="Search">
 				<div class="icon-search"></div>
-				<div class="statuses">
+				<div class="statuses" tabindex="0">
 					All statuses
 				</div>
 			</div>
@@ -81,23 +81,23 @@
 
 					<div class="navMenu">
 
-						<div class="navMenu__item navMenu__item-active">
+						<div class="navMenu__item navMenu__item-active" tabindex="0">
 							Behavior
 						</div>
 
-						<div class="navMenu__item">
+						<div class="navMenu__item" tabindex="0">
 							Appearance
 						</div>
 
-						<div class="navMenu__item">
+						<div class="navMenu__item" tabindex="0">
 							Custom Fields
 						</div>
 
-						<div class="navMenu__item">
+						<div class="navMenu__item" tabindex="0">
 							Questions
 						</div>
 
-						<div class="navMenu__item">
+						<div class="navMenu__item" tabindex="0">
 							URL Control
 						</div>
 
@@ -130,7 +130,7 @@
 
 							<div class="part__right">
 								<span class="currencyName">$</span>
-								<input type="number" id="currencyValue" name="currencyValue" class="currencyValue">
+								<input type="number" id="currencyValue" name="currencyValue" class="currencyValue" value="10">
 
 								<div class="selectWrap selectWrap-currency">
 									<select name="currencySelect" id="currencySelect">
@@ -145,20 +145,21 @@
 						<div class="part part-amount">
 							
 							<div class="part__left part__left-amount">
-								<label for="amount">Default Amount</label>
+								Default Amount
 							</div>
 
 							<div class="part__right part__right-amount">
 								<div class="group">
-									<input type="radio" name="amount">
-									Match Checkout Setting
+									<input type="radio" name="amount" id="amountFirst" tabindex="0">
+									<label for="amountFirst">Match Checkout Setting</label>
 								</div>
 								<div class="group">
-									<input type="radio" name="amount" checked>
-									Customize
+									<input type="radio" name="amount" id="amountSecond" checked tabindex="0">
+									<label for="amountSecond">Customize</label>
 								</div>
 								<div class="checkBox">
-									<input type="checkbox" name="amountCheck" checked>	Allow donor to change default currency
+									<input type="checkbox" name="amountCheck" id="amountCheck" checked>
+									<label for="amountCheck">Allow donor to change default currency</label>
 								</div>
 							</div>
 
@@ -215,24 +216,28 @@
 
 			<aside class="aside">
 
+				<div class="sandwich">
+					<div></div>
+				</div>
+
 				<nav class="nav">
 
-					<a href="#" class="nav__item">
+					<a href="#" class="nav__item" tabindex="0">
 						<span class="icon icon-repeat"></span>
 						Change Amount
 					</a>
 
-					<a href="#" class="nav__item">
+					<a href="#" class="nav__item" tabindex="0">
 						<span class="icon icon-wallet"></span>
 						Change Payment Method
 					</a>
 
-					<a href="#" class="nav__item nav__item-active">
+					<a href="#" class="nav__item nav__item-active" tabindex="0">
 						<span class="icon icon-calendar"></span>
 						Change Date
 					</a>
 
-					<a href="#" class="nav__item">
+					<a href="#" class="nav__item" tabindex="0">
 						<span class="icon icon-cancel"></span>
 						Cancel Recurring
 					</a>

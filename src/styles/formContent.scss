@@ -9,19 +9,37 @@
 
 	.navMenu {
 		margin-top: $header-padding;
+		padding-bottom: 1px;
+		position: relative;
 		@include flex(left, center);
-		border-bottom: 1px solid #DBDCDE;
+		overflow-x: auto;
+		overflow-y: hidden;
+
+		&::-webkit-scrollbar {
+			width: 0;
+			height: 0;
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			bottom: 1px;
+			width: 100%;
+			border-bottom: 1px solid #DBDCDE;
+		}
 
 		&__item {
 			position: relative;
 			@include flex(center, center);
 			padding: 0 16px;
 			min-height: 46px;
+			border-bottom: 1px solid #DBDCDE;
 			font-family: "WorkSans-SemiBold", sans-serif;
 			font-size: 12px;
 			line-height: 20px;
 			letter-spacing: 0.03em;
 			text-transform: uppercase;
+			white-space: nowrap;
 			cursor: pointer;
 
 			&:first-child {
@@ -42,6 +60,12 @@
 					height: 8px;
 					background-color: white;
 				}
+			}
+
+			&:focus {
+				color: $active-text;
+				text-decoration: underline;
+				outline: none
 			}
 		}
 	}
@@ -81,7 +105,7 @@
 
 				.currencyName {
 					position: absolute;
-					top: 12px;
+					top: 11px;
 					left: 15px;
 				}
 
@@ -89,6 +113,10 @@
 					padding: 0 15px 0 25px;
 					width: 192px;
 					height: 40px;
+
+					&:focus {
+						border-color: $elements-color;
+					}
 				}
 
 				.selectWrap {
@@ -97,17 +125,6 @@
 
 					&-currency {
 						width: 80px;
-					}
-
-					&::before {
-						content: "";
-						position: absolute;
-						top: 10%;
-						right: 2px;
-						height: 80%;
-						width: 15px;
-						background-color: #fff;
-						pointer-events: none;
 					}
 
 					&::after {
@@ -123,11 +140,20 @@
 					select#Designation {
 						padding: 8px 12px;
 						min-width: 296px;
+						height: 40px;
+
+						&:focus {
+							border-color: $elements-color;
+						}
 					}
 
 					select#currencySelect {
 						padding: 8.5px 12px;
 						min-width: 80px;
+
+						&:focus {
+							border-color: $elements-color;
+						}
 					}
 				}
 
@@ -137,16 +163,16 @@
 
 					.group {
 						@include flex(left, center);
+						position: relative;
 						margin-bottom: 16px;
 						width: 100%;
 
 						input {
-							position: relative;
 							margin-right: 12px;
 							width: 24px;
 							height: 24px;
 
-							&:checked::before {
+							&[type="radio"]:checked + label::before {
 								content: "";
 								position: absolute;
 								top: 0;
@@ -154,11 +180,16 @@
 								@include addImage(24px, 24px, radio);
 								border-radius: 30px;
 							}
+
+							&:focus {
+								filter: drop-shadow(0px 1px 3px $elements-color);
+							}
 						}
 					}
 
 					.checkBox {
 						@include flex(left, center);
+						position: relative;
 
 						input {
 							position: relative;
@@ -166,13 +197,17 @@
 							width: 24px;
 							height: 24px;
 
-							&:checked::before {
+							&[type="checkbox"]:checked + label::before {
 								content: "";
 								position: absolute;
 								top: 0;
 								left: 0;
 								@include addImage(24px, 24px, checker);
 								z-index: 5;
+							}
+
+							&[type="checkbox"]:checked {
+								opacity: 0;
 							}
 
 							&:checked::after {
@@ -183,6 +218,10 @@
 								width: 30px;
 								height: 30px;
 								background-color: #fff;
+							}
+
+							&:focus {
+								filter: drop-shadow(0px 1px 3px $elements-color);
 							}
 						}
 					}
@@ -224,6 +263,15 @@
 						-webkit-appearance: none;
 						height: 0;
 						width: 216px;
+
+						&:focus {animation: focusRange 0.5s;}
+
+						@keyframes focusRange {
+							50% { filter: drop-shadow(0px 3px 2px #2EB670); }
+						}
+						@-webkit-keyframes focusRange {
+							50% { filter: drop-shadow(0px 3px 2px #2EB670); }
+						}
 					}
 					
 					input[type=range]::-webkit-slider-runnable-track {
@@ -242,6 +290,18 @@
 						width: 19px;
 						height: 19px;
 						border-radius: 19px;
+						background-color: #2EB670;
+						cursor: pointer;
+						z-index: 10;
+					}
+					input[type=range]::-moz-range-thumb {
+						-webkit-appearance: none;
+						position: relative;
+						margin-top: -7px;
+						width: 19px;
+						height: 19px;
+						border-radius: 19px;
+						border: none;
 						background-color: #2EB670;
 						cursor: pointer;
 						z-index: 10;
@@ -277,6 +337,17 @@
 				border-radius: 8px;
 				background-color: #FFFFFF;
 				transition: all 0.2s;
+			}
+
+			button:focus {
+				animation: focusBtn 0.4s;
+			}
+			
+			@keyframes focusBtn {
+				50% { transform: scale(0.98); }
+			}
+			@-webkit-keyframes focusBtn {
+				50% { transform: scale(0.98); }
 			}
 		}
 	}
