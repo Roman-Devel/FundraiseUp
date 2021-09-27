@@ -1,5 +1,8 @@
 import './styles/main.scss'
 
+/*
+**Resize Range
+*/
 const rangeSize = document.getElementById("rangeSize"),
 	  trackSize = document.querySelector('.trackSize'),
 	  rangeRadius = document.getElementById("rangeRadius"),
@@ -8,10 +11,16 @@ const rangeSize = document.getElementById("rangeSize"),
 rangeSize.addEventListener('input', () => trackSize.style.width = rangeSize.value + '%')
 rangeRadius.addEventListener('input', () => trackRadius.style.width = rangeRadius.value + '%')
 
+/*
+**Submit
+*/
 document.querySelector('button[type="submit"]').addEventListener('click', (event) => {
 	event.preventDefault()
 })
 
+/*
+**Reset Btn
+*/
 document.querySelector('button[type="reset"]').addEventListener('click', () => {
 	setTimeout(() => {
 		trackSize.style.width = rangeSize.value + '%'
@@ -19,6 +28,9 @@ document.querySelector('button[type="reset"]').addEventListener('click', () => {
 	}, 0)
 })
 
+/*
+**Sandwich mobile menu
+*/
 const sandwich = document.querySelector('.aside .sandwich'),
 	  nav = document.querySelector('.aside .nav')
 

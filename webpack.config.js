@@ -14,8 +14,10 @@ module.exports = {
 	mode: 'development',
 	entry: {
 		main: [
+			'core-js/stable',
+			'regenerator-runtime/runtime',
 			'./index.js'
-		]
+		],
 	},
 	output: {
 		filename: filename('.js'),
@@ -104,6 +106,13 @@ module.exports = {
 				type: 'asset/resource',
 				generator: {
 					filename: `assets/fonts/${filename('')}[ext]`
+				}
+			},
+			{
+				test: /\.m?(js)$/,
+				exclude: /node_modules/,
+				use: {
+					loader: 'babel-loader'
 				}
 			}
 		]

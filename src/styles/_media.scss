@@ -58,54 +58,43 @@
 			z-index: 11;
 			width: 39px;
 			height: 30px;
-			border: 1px solid #2EB670;
+			border: 1px solid $elements-color;
 			border-radius: 0 4px 4px 4px;
 			background-color: #F3F3F3;
+
+			&::before, & div, &::after {
+				position: absolute;
+				background: $elements-color;
+				border-radius: 6px;
+				transition: 0.5s;
+			}
 
 			&::before {
 				content: "";
 				top: 6px;
 				left: 3px;
-				position: absolute;
-				background: #2EB670;
 				width: 30px;
 				height: 3px;
-				border-radius: 6px;
-				transition: 0.5s;
 			}
 
 			& div {
 				top: 12px;
 				left: 3px;
-				position: absolute;
-				background: #2EB670;
 				width: 30px;
 				height: 3px;
-				border-radius: 4px;
-				transition: 0.5s;
 			}
 
 			&::after {
 				content: "";
 				top: 18px;
 				left: 3px;
-				position: absolute;
-				background: #2EB670;
 				width: 30px;
 				height: 3px;
-				border-radius: 4px;
-				transition: 0.5s;
 			}
 
-			&-active:before {
-				transform: translateY(7px) rotate(135deg);
-			}
-			&-active:after {
-				transform: translateY(-5px) rotate(-135deg);
-			}
-			&-active div {
-				transform: scale(0);
-			}
+			&-active:before { transform: translateY(7px) rotate(135deg); }
+			&-active:after  { transform: translateY(-5px) rotate(-135deg); }
+			&-active div 	{ transform: scale(0); }
 		}
 
 		.nav {
