@@ -171,6 +171,8 @@
 							margin-right: 12px;
 							width: 24px;
 							height: 24px;
+							-webkit-appearance: none;
+    						border-radius: 100%;
 
 							&[type="radio"]:checked + label::before {
 								content: "";
