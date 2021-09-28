@@ -8,14 +8,14 @@
 @mixin headerCardRulles($padding, $height) {
 	padding-left: $padding;
 	padding-right: $padding;
-	min-height: $height;
+	height: $height;
 	border-bottom: 1px solid #DBDCDE;
 }
 
 @mixin footerCardRulles($padding, $height, $bc) {
 	padding-left: $padding;
 	padding-right: $padding;
-	min-height: $height;
+	height: $height;
 	border-radius: 8px;
 	background-color: $bc;
 }

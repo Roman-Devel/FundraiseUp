@@ -1,15 +1,26 @@
 import './styles/main.scss'
 
-/*
+/* 
 **Resize Range
 */
-const rangeSize = document.getElementById("rangeSize"),
+const rangeSize = document.getElementById('rangeSize'),
 	  trackSize = document.querySelector('.trackSize'),
-	  rangeRadius = document.getElementById("rangeRadius"),
+	  rangeRadius = document.getElementById('rangeRadius'),
 	  trackRadius = document.querySelector('.trackRadius')
 
-rangeSize.addEventListener('input', () => trackSize.style.width = rangeSize.value + '%')
-rangeRadius.addEventListener('input', () => trackRadius.style.width = rangeRadius.value + '%')
+if (/trident/.test(navigator.userAgent.toLowerCase())) {
+	rangeSize.addEventListener('change', () => trackSize.style.width = rangeSize.value + '%')
+	rangeRadius.addEventListener('change', () => trackRadius.style.width = rangeRadius.value + '%')
+
+	rangeSize.addEventListener('change', () => trackSize.style.width = rangeSize.value + '%')
+	rangeRadius.addEventListener('change', () => trackRadius.style.width = rangeRadius.value + '%')
+} else {
+	rangeSize.addEventListener('input', () => trackSize.style.width = rangeSize.value + '%')
+	rangeRadius.addEventListener('input', () => trackRadius.style.width = rangeRadius.value + '%')
+
+	rangeSize.addEventListener('input', () => trackSize.style.width = rangeSize.value + '%')
+	rangeRadius.addEventListener('input', () => trackRadius.style.width = rangeRadius.value + '%')
+}
 
 /*
 **Submit
@@ -35,7 +46,7 @@ const sandwich = document.querySelector('.aside .sandwich'),
 	  nav = document.querySelector('.aside .nav')
 
 if (sandwich) {
-	sandwich.addEventListener('click', (event) => {
+	sandwich.addEventListener('click', () => {
 		if (nav.classList.contains('nav-active')) {
 			nav.classList.add('nav-passive')
 			nav.classList.remove('nav-active')

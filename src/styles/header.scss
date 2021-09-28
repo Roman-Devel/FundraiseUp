@@ -3,7 +3,7 @@
 
 .header {
 	width: 100%;
-	min-height: 160px;
+	height: 160px;
 	@include mainCardRulles;
 
 	&__title {
@@ -15,10 +15,10 @@
 	&__footer {
 		@include flex(left, center);
 		@include footerCardRulles($header-padding, 72px, $background-bottom);
+		position: relative;
 	}
 
 	input[type="search"] {
-		position: relative;
 		padding-left: 42px;
 		min-width: 190px;
     	max-width: 336px;
@@ -33,7 +33,9 @@
 
 	.icon-search {
 		position: absolute;
+		top: 50%;
 		left: $header-padding + 16px;
+		transform: translateY(-50%);
 		@include addImage(18px, 18px, search);
 	}
 

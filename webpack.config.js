@@ -57,6 +57,7 @@ module.exports = {
 			]
 		})
 	],
+	target: ['web', 'es5'],
 	module: {
 		rules: [
 			{
@@ -112,7 +113,16 @@ module.exports = {
 				test: /\.m?(js)$/,
 				exclude: /node_modules/,
 				use: {
-					loader: 'babel-loader'
+					loader: 'babel-loader',
+					options: {
+                        presets: [
+                            ['@babel/preset-env', {
+                                targets: {
+                                    "ie": "11"
+                                }
+                            }]
+                        ]
+                    }
 				}
 			}
 		]

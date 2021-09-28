@@ -41,6 +41,7 @@
 		"webpack-dev-server": "^4.2.0"
 	},
 	"dependencies": {
+		"babel-preset-es2015": "^6.24.1",
 		"core-js": "^3.9.0",
 		"normalize.css": "^8.0.1",
 		"regenerator-runtime": "^0.13.9"
